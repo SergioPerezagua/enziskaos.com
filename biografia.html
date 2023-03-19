@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="import" href="menu.html" id="mi-plantilla">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Enziskaos - Biografía</title>
+</head>
+<body onload="funciones_onload_biografia()" onresize="funciones_onresize_biografia()">
+    <div class="menu-importado" id="menu-importado"></div>
+    <div class="biografía-main container mt-3 mb-3 p-0">
+        <div class="biografia-cuerpo row w-100 pt-2 pb-2 pr-0 pl-0 m-0 d-flex justify-content-around">
+            <div class="col-5">
+                <h5 class="presentacion">Hola soy Rafa,</h5>
+                <p class="text-light biografia-info">Pego voces por el micrófono, toco un poco algún que otro instrumento musical y, de vez en cuando, produzco audio y vídeo de forma casera y autodidacta. En <a class="youtube-channel" href="https://youtube.com/@rafaelperezagua" target="_blank">mi canal de YouTube</a> , podrás encontrar versiones de canciones más o menos conocidas, temas propios y alguna locura; casi siempre, montados sobre imágenes de películas que me han inspirado de alguna manera. Movido únicamente por la curiosidad, el afán de aprender y sin otra pretensión más allá de pasarlo bien e ir mejorando día a día.</p>
+            </div>
+            <div class="col-6 d-flex justify-content-center">
+                <div class="card w-100">
+                    <div class="imagenes-biografia card-img-top d-flex">
+                        <img src="images/profile2.jpg" class="card-img-top w-50" alt="">
+                        <img src="images/profile.jpg" class="card-img-top w-50" alt="">
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center">
+                    <h5 class="card-title">Rafael Perezagua Fernández</h5>
+                    <div class="d-flex justify-content-around w-50 mt-2">
+                        <a class="enlaces-redes" href="https://www.facebook.com/rafael.perezaguafernandez" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a class="enlaces-redes" href="https://instagram.com/rafastudiorock?igshid=YmMyMTA2M2Y=" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a class="enlaces-redes" href="https://twitter.com/PerezaguaRafael?t=Q2q-ISbslwU5e6Pjg4FXfA&s=09" target="_blank"><i class="bi bi-twitter"></i></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="cambio-seccion">
+        <div class="biografia-cuerpo row w-100 pt-2 pb-2 pr-0 pl-0 m-0 d-flex justify-content-around" id="enziskaos">
+            <div class="col-5 d-flex justify-content-center">
+                <div class="card w-100 h-100">
+                    <div class="imagenes-biografia card-img-top d-flex justify-content-center bg-dark">
+                        <img src="images/logo_enziskaos.jpg" class="card-img-top w-75" alt="">
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center">
+                    <h5 class="card-title">Enziskaos</h5>
+                    <div class="d-flex justify-content-around w-50 mt-2">
+                        <a class="enlaces-redes" href="https://www.facebook.com/EnziskaosRock" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a class="enlaces-redes" href="https://instagram.com/enziskaos?igshid=YmMyMTA2M2Y=" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a class="enlaces-redes" href="https://youtube.com/@rafaelperezagua" target="_blank"><i class="bi bi-youtube"></i></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <p class="text-light biografia-info">Enziskaos es mi proyecto personal, donde trato de reunir demos, arreglos, composiciones, etc, interpretadas, grabadas y editadas por mí, de forma autodidacta y sin ayuda de nadie, desde una habitación de mi casa, a la que llamo cariñosamente <span class="rafa-studio-rock">"RafaStudioRock"</span>.</p>
+            </div>
+        </div>
+
+        <hr class="cambio-seccion">
+
+        <div class="row d-flex justify-content-start align-items-start pt-2 pb-2 m-0">
+            <div class="col-3 h-100 d-flex flex-column align-items-start">
+                <div class="contenedor-imagen">
+                    <img class="w-100 mb-2" src="images/band-logos-roll-rock-cuadrado.jpg" alt="">
+                </div>
+                <div class="contenedor-imagen">
+                    <img class="w-100" src="images/HAZ.jpg" alt="">
+                    <h5 class="leyenda-imagen text-center text-light">HAZ</h5>
+                </div>
+            </div>
+            <div class="col-6 pt-4">
+                <p class="biografia-info text-light">Desde la más tierna infancia, siempre me sentí muy atraído por la música. Recuerdo como me flipaba con los vinilos que sonaban en casa: Deep Purple, Supertramp, Pink Floyd, AC DC, etc... Que solían pinchar mi padre y mis tíos.</p>
+                <p class="biografia-info text-light">A la edad de 10 u 11 años, comienzo a experimentar la grabación y a componer algún que otro tema, que queda registrado en cintas de casette.</p>
+                <p class="biografia-info text-light">A los 14, formo mi primera banda <span>"Haz"</span>.  Después, llegarían <span>"RaDaR"</span>, <span>"Uruk hai"</span>, <span>"Asträgard"</span>  y, ahora, <span><a href="#enziskaos" style="color: #a90dc5;">"Enziskaos"</a></span>. Todas ellas, con muy poca o ninguna repercusión, pero siempre con mucha dedicación, muchas ganas, y mucha ilusión.</p>
+                <p class="biografia-info text-light">Muy contento por este nuevo comienzo,<span><a href="#enziskaos" style="color: #a90dc5;">"Enziskaos"</a></span> y su primer disco, <a class="especial-links" href="latidos.html">"Latidos"</a>, que solo es un adelanto de todo lo que esta por venir, y que espero, recorramos y disfrutemos juntos a lo largo de todo el proceso.</p>
+            </div> 
+            <div class="col-3 h-100 d-flex flex-column align-items-start">
+                <div class="contenedor-imagen">
+                    <img class="w-100 mb-2" src="images/astragard3.jpg" alt="">
+                </div>
+                <div class="contenedor-imagen">
+                    <img class="w-100" src="images/astragard2.jpg" alt="">
+                    <h5 class="leyenda-imagen leyenda-imagen-astragard text-center text-light">Astragard</h5>
+                </div>
+            </div>
+
+            <h1 class="despedida-biografia text-center text-light">🤘🏻¡¡Salud y Rock & Roll!!🤘🏻</h1>
+        </div>
+    </div>
+    <footer id="footer-importado"></footer>
+    <script src="functions.js"></script>
+    <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+</html>

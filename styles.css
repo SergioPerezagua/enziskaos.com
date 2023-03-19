@@ -1,0 +1,630 @@
+@font-face {
+    font-family: 'Punkboy';
+    src: url('fuentes/Punkboy/Punkboy-Bold.eot');
+    src: url('fuentes/Punkboy/Punkboy.eot?#iefix') format('embedded-opentype'),
+        url('fuentes/Punkboy/Punkboy.woff2') format('woff2'),
+        url('fuentes/Punkboy/Punkboy.woff') format('woff'),
+        url('fuentes/Punkboy/Punkboy.ttf') format('truetype'),
+        url('fuentes/Punkboy/Punkboy.svg#Punkboy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Chinese Rocks Rg';
+    src: url('fuentes/Chinese Rocks/ChineseRocksRg-Regular.eot');
+    src: url('fuentes/Chinese Rocks/ChineseRocksRg-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fuentes/Chinese Rocks/ChineseRocksRg-Regular.woff2') format('woff2'),
+        url('fuentes/Chinese Rocks/ChineseRocksRg-Regular.woff') format('woff'),
+        url('fuentes/Chinese Rocks/ChineseRocksRg-Regular.ttf') format('truetype'),
+        url('fuentes/Chinese Rocks/ChineseRocksRg-Regular.svg#ChineseRocksRg-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AlphaFridgeMagnets';
+    src: url('fuentes/alpha_fridge_magnets/AlphaFridgeMagnets.eot');
+    src: url('fuentes/alpha_fridge_magnets/AlphaFridgeMagnets.eot?#iefix') format('embedded-opentype'),
+        url('fuentes/alpha_fridge_magnets/AlphaFridgeMagnets.woff2') format('woff2'),
+        url('fuentes/alpha_fridge_magnets/AlphaFridgeMagnets.woff') format('woff'),
+        url('fuentes/alpha_fridge_magnets/AlphaFridgeMagnets.ttf') format('truetype'),
+        url('fuentes/alpha_fridge_magnets/AlphaFridgeMagnets.svg#AlphaFridgeMagnets') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Supersonic Rocketship';
+    src: url('fuentes/supersonic_rocketship/SupersonicRocketship.eot');
+    src: url('fuentes/supersonic_rocketship/SupersonicRocketship.eot?#iefix') format('embedded-opentype'),
+        url('fuentes/supersonic_rocketship/SupersonicRocketship.woff2') format('woff2'),
+        url('fuentes/supersonic_rocketship/SupersonicRocketship.woff') format('woff'),
+        url('fuentes/supersonic_rocketship/SupersonicRocketship.ttf') format('truetype'),
+        url('fuentes/supersonic_rocketship/SupersonicRocketship.svg#SupersonicRocketship') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*{
+    box-sizing: border-box;    
+    padding: 0; 
+    margin: 0; 
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+#menu-importado{
+    width: 100%;
+    height: 50px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.nav1{
+    width: 100%;
+    height: 50px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item{
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+    text-decoration: none;
+    font-family: 'AlphaFridgeMagnets';
+}
+
+.menu-item:hover{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+}
+
+.home:hover{
+    background-color: transparent;
+}
+
+.my-dropdown::after{
+    content: none !important;
+}
+
+.hero{
+    width: 100%;
+    background-color: red;
+    height: 91vh;
+}
+
+.transparencia{
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bienvenida{
+    width: 100%;
+    color: white;
+    font-family: 'Chinese Rocks Rg';
+    font-size: 70px;
+    text-align: center;
+}
+
+.carousel{
+    width: 100%;
+    height: 91vh;
+    background-image: linear-gradient(black, red);
+    background-color: white;
+}
+
+.carousel-inner-contenedor{
+    height: 93%;
+}
+
+.imagenes-carousel{
+    object-fit: contain;
+}
+
+.poster1, .poster2, .poster3, .poster4, .poster5, .poster6, .poster7, .poster8, .poster9,
+.poster10, .poster11, .poster12, .poster13{
+    height: 92%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#youtube1, #youtube2, #youtube3, #youtube4, #youtube5, #youtube6, #youtube7, #youtube8, #youtube9,
+#youtube10, #youtube11, #youtube12, #youtube13{
+    display: none;
+}
+
+.switch_poster_youtube{
+    background-color: transparent;
+    border: none;
+}
+
+.videos-carrusel-videoclips{
+    width: 80% !important;
+    object-fit: contain !important;
+}
+
+.video-carousel-videoclips{
+    height: 85vh;
+    border-radius: 50px;
+}
+
+.list-group-item{
+    border: none !important;
+}
+
+.list-group-item:hover{
+    background-color: red;
+    color: white;
+}
+
+.container{
+    width: 100%;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.enlaces-rapidos, .redes-sociales {
+    color: white; 
+    text-decoration: none;
+    font-family: 'AlphaFridgeMagnets';
+}
+
+.enlaces-rapidos:hover, .redes-sociales:hover{
+    color: #a90dc5;
+}
+
+.copyright{
+    font-family: 'Supersonic Rocketship';
+}
+
+.enlaces-rapidos-titulo, .redes-sociales-titulo{
+    font-family: 'Supersonic Rocketship';
+    color: white;
+}
+
+.presentacion-disco{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.85), rgba(0, 0, 0, 0.9));
+    background-color: white;
+}
+
+.presentacion_disco_2{
+    width: 85% !important;
+}
+
+.titulo-disco{
+    font-size: 68px;
+}
+
+.artista{
+    font-size: 34px;
+}
+
+.info-disco{
+    width: 60% !important;
+}
+
+.swipe_container{
+    background-color: transparent;
+    border: none;
+}
+
+.presentacion_disco_3{
+    width: 90vw;
+    box-shadow: 10px 0 5px black,
+                -10px 0 5px black;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.parrafo_1{
+    height: 64%;
+}
+
+.p_1{
+    width: 63%;
+    font-family: 'AlphaFridgeMagnets';
+    font-size: 17px;
+}
+
+.p_2{
+    width: 35%;
+    font-family: 'AlphaFridgeMagnets';
+    font-size: 17px; 
+}
+
+.boton_return, .parrafo_2{
+    height: 18%;
+}
+
+.caratula-disco{
+    width: 30%;
+}
+
+.caratula-disco-img{
+    height: 90%;
+    /* border-radius: 30px; */
+    box-shadow: 3px 3px 8px 0 #800057, -3px -3px 8px 0 #800057, -3px 3px 8px 0 #800057, 3px -3px 8px 0 #800057;
+    object-fit: contain;
+    margin: 1px;
+    
+}
+
+.portada-disco-img{
+    border: 3px solid;
+    border-image: linear-gradient(90deg, #a90dc5, #800057) 1;
+    box-shadow: 4px 4px 6px 1px grey;
+}
+
+.lista-discos{
+    height: 80vh;
+}
+
+/* .acordeon_mobile{
+    display: none;
+}  */
+
+.menu{
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+audio{
+    width: 80%;
+    margin: 10px 0;
+}
+
+.botones_de_accion{
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+}
+
+.estilos-botones{
+    width: 50%;
+    height: 50px;
+}
+
+.contenedor_cambiante{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+}
+
+.descripcion{
+    background-color: pink;
+}
+
+.letra{
+    display: none;
+    background-color: aquamarine;
+}
+
+.accordion-button{
+    background-color: red !important;
+    color: white !important;
+}
+
+.accordion-button::after{
+    background-color: white;
+}
+
+.accordion-button.collapsed{
+    background-color: black !important;
+    color: white !important;
+}
+
+.detalles-disco{
+    height: 40vh !important;
+}
+
+/* .portada-disco{
+    object-fit: contain;
+    
+} */
+
+.accordion-body{
+    background-image: linear-gradient(red, black);
+}
+
+.vacio{
+    height: 91vh;
+}
+
+.plataformas-streaming-titulo{
+    font-family: 'Supersonic Rocketship';
+}
+
+.plataformas-streaming{
+    font-size: 30px;
+}
+
+.titulo-disco, .artista{
+    font-family: 'Punkboy';
+    color: white;
+}
+
+.btn{
+    background-color: transparent !important;
+    color: white !important;
+    font-size:25px !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.dropdown-menu{
+    width: 50vw !important;
+    background-color: transparent !important;
+}
+
+.btn:hover{
+    background-color: red !important;
+}
+
+.dropdown-item{
+    background-color: red !important;
+    color: white !important;
+}
+
+.dropdown-item:hover{
+    background-color: black !important;
+    color: white !important;
+}
+
+.dropdown-divider{
+    width: 100%;
+    height: 5px !important;
+}
+
+.titulo-cancion, .titulo-disco-discografia, .description, .lyrics{
+    font-family: 'Supersonic Rocketship';
+    font-variant: small-caps;
+}
+
+.titulo-disco-discografia{
+    font-size: 25px !important;
+}
+
+.detalles-disco-titulo{
+    font-family: 'Supersonic Rocketship';
+    font-size: 30px;
+    color: black;
+    font-variant: small-caps;
+}
+
+.detalles-disco-item{
+    font-family: 'AlphaFridgeMagnets'; 
+}
+
+.detalles-disco-item span{
+    font-weight: bold;
+    font-family: 'Supersonic Rocketship';
+}
+
+.description, .lyrics{
+    color: black;
+}
+
+.reproductor{
+    color: red !important;
+    height: 30px !important;
+}
+
+.info{
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'AlphaFridgeMagnets'; 
+}
+
+.enlaces-redes{
+    text-decoration: none; 
+    color: black;
+    font-size: 25px;
+}
+.divider{
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+.biografía-main{
+    background-image: linear-gradient(rgba(255, 0, 0, 0.85), rgba(0, 0, 0, 0.9));
+    background-color: white;
+}
+
+.card{
+    background-color: #a90dc5 !important;
+    border: 2px solid black !important;
+}
+
+.card-body{
+    border-top: 2px solid black;
+}
+
+.card-title{
+    font-family: 'Supersonic Rocketship';
+    color: black !important;
+}
+
+.presentacion{
+    font-family: 'Supersonic Rocketship';
+    font-variant: small-caps;
+    font-size: 40px;
+    color: black !important;
+}
+
+.youtube-channel{
+    color: white;
+}
+
+.youtube-channel:hover{
+    color: #a90dc5;
+}
+
+.leyenda-imagen{
+    font-family: 'Supersonic Rocketship';
+}
+
+.leyenda-imagen-astragard{
+    font-variant: small-caps;
+}
+
+.biografia-info{
+    font-family: 'AlphaFridgeMagnets';
+}
+
+.cambio-seccion{
+    margin: 0 auto;
+    width: 90%;
+    background-color: black;
+    height: 5px;
+    opacity: 1;
+}
+
+span{
+    color: #a90dc5;
+}
+
+.especial-links, .rafa-studio-rock{
+    color:#a90dc5;
+    font-variant: small-caps;
+}
+
+.despedida-biografia{
+    font-family: 'Supersonic Rocketship';
+    font-variant: small-caps;
+    font-size: 75px;
+}
+
+.custom-tooltip.tooltip > .tooltip-inner{
+    border: 1px solid black;
+    background-color: #dc3545;
+    font-family: 'AlphaFridgeMagnets';
+    font-size: 19px;
+    color: black;
+    opacity: 1;
+}
+
+.custom-tooltip-2.tooltip > .tooltip-inner, .custom-tooltip-6.tooltip > .tooltip-inner{
+    border: 1px solid black;
+    background-image: linear-gradient(#a90dc5, #800057);
+    font-family: 'AlphaFridgeMagnets';
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+}
+
+.custom-tooltip-3.tooltip > .tooltip-inner, .custom-tooltip-7.tooltip > .tooltip-inner{
+    border: 1px solid black;
+    color: white;
+    background-image: linear-gradient(#a90dc5, #800057);
+    font-family: 'AlphaFridgeMagnets';
+    font-size: 20px;
+    opacity: 1;
+}
+
+.custom-tooltip-4.tooltip > .tooltip-inner{
+    border: 1px solid black;
+    font-family: 'AlphaFridgeMagnets';
+    font-size: 30px;
+    opacity: 1;
+}
+
+.contenedor_tooltip_6{
+    height: 100%;
+}
+
+/* .contenedor_tooltip_5{
+    height: 100%;
+    width:100%;
+    background-color: #800057;
+} */
+
+.custom-tooltip-5.tooltip > .tooltip-inner{
+    border: 1px solid black;
+    background-image: linear-gradient(#a90dc5, #800057);
+    font-family: 'AlphaFridgeMagnets';
+    font-size: 25px;
+    color: white;
+    opacity: 1; 
+}
+
+.fotorama{
+    height: 91vh;
+    background-image: linear-gradient(black, #ff0000);
+    background-color: white;
+}
+
+/* .fotorama__video iframe{
+    height: 50% !important;
+} */
+
+@media(min-width: 1500px){
+    .presentacion_disco_3{
+        width: 80%;
+    }
+
+    .presentacion-disco{
+        height: 30vh;
+    }
+
+    .p_1{
+        font-size: 18px;
+    }
+
+    .p_2{
+        font-size: 18px;
+    }
+}

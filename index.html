@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Enziskaos</title>
+</head>
+<body onload="funciones_onload_index()" onresize="funciones_onresize_index()">
+    <div id="menu-importado"></div>
+    <div class='hero' id="hero">
+        <div class="transparencia">
+            <h1 class="bienvenida" id="bienvenida">¡¡Bienvenidos a Enziskaos!!</h1>
+        </div>
+    </div>
+    <div id="demo" class="carousel slide  d-flex flex-row justify-content-center align-items-center  mt-3 mb-3 " data-ride="carousel" data-interval="2000">
+        <div class="carousel-inner  w-100 h-100">
+            <div class="carousel-inner p-0 m-0 w-100 h-100">
+                <div class="w-100 h-100 carousel-item active ">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100 ">
+                            <img src="imagenes_slider/Imagenes_Slider (1).bmp" class="d-block pt-3 pb-3" height="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (2).GIF" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (3).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (6).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (7).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (8).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (9).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (10).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (11).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (12).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (13).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (14).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (15).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (16).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (17).JPG" class="d-block h-100 pt-3 pb-3" alt="17">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (18).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (19).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (20).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (21).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (22).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (23).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (24).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (25).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (26).bmp"d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (27).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (28).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (29).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (30).bmp" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (31).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (32).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (33).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (34).JPG" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (35).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (36).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (37).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (38).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (39).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (40).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (41).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (42).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (43).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (44).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (45).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (46).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (47).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (48).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (49).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (51).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (52).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (53).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (54).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (55).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (56).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (57).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (58).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (59).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (60).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (61).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (62).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (63).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (64).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (65).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (66).jpg" class="d-block w-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (67).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (68).jpg" class="d-block w-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (1).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Imagenes_Slider (2).GIF" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (3).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (4).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (5).jpg class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (6).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (7).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (8).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (9).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (10).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (11).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (12).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (13).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (14).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (15).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (16).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (17).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (18).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (19).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (20).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (21).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (22).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (23).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (24).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (25).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-100 carousel-item">
+                    <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center ">
+                        <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                            <img src="imagenes_slider/Nuevas (26).jpg" class="d-block h-100 pt-3 pb-3" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="demo2" class="carousel slide mt-4 mb-4 p-0" data-ride="carousel" data-interval="false" data-keyboard="true" data-wrap="false">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo2" data-slide-to="0" class="active"></li>
+          <li data-target="#demo2" data-slide-to="1"></li>
+          <li data-target="#demo2" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner-contenedor carousel-inner p-0 m-0 w-100">
+            <div class="w-100 h-100 carousel-item active">
+                <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center">
+                    <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                        <video controls src="imagenes_slider/Videos_Slider(1).mp4" width="75%"></video>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 h-100 carousel-item">
+                <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center">
+                    <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                        <video src="imagenes_slider/Videos_Slider(2).mp4" controls width="75%" height="90%"></video>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 h-100 carousel-item">
+                <div class="contenedor_imagenes w-100 h-100 d-flex flex-row justify-content-center align-items-center">
+                    <div class="imagenes-carousel d-flex flex-row justify-content-center align-items-center w-75 h-100">
+                        <video src="imagenes_slider/Videos_Slider(3).mp4" controls width="75%" height="90%"></video>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo2" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            
+        </div>
+    </div>
+    <footer id="footer-importado"></footer>
+    <script src="functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+</html>

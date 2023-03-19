@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="import" href="menu.html" id="mi-plantilla">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Enziskaos - Latidos</title>
+</head>
+<body onload="funciones_onload_latidos()" onresize="funciones_onresize_latidos()">
+    <div class="menu-importado" id="menu-importado"></div>
+    <section>
+        <div class="container w-75 h-25 alert alert-danger p-1 mt-3 text-center d-flex flex-column align-items-center" role="alert">
+            <h3 class="mb-3 plataformas-streaming-titulo"><strong>¡Ya disponible en las principales plataformas de Streaming!</strong></h3>
+            <div class="w-25 plataformas-streaming d-flex justify-content-around align-items-center">
+                <a data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-html="true" title="Spotify" data-bs-placement="top" class="text-danger d-flex justify-content-around align-items-center" href="https://open.spotify.com/album/13CPBBUmAcO0XWMZ4RtIB7?si=HnHTC5iXTti71gsvOz1ezQ" target="_blank"><i class="bi bi-spotify"></i></a>
+                <a data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-html="true" title="YouTube Music" data-bs-placement="top" class="d-flex justify-content-around align-items-center" href="https://music.youtube.com/playlist?list=OLAK5uy_lQRGKZC7MqqjBI5GoUwCCg9oP3Jp67hkM&feature=share" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="40" height="40"
+                    viewBox="0,0,256,256"
+                    style="fill:#000000;">
+                    <g fill="#dc3545" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,3c-12.15,0 -22,9.85 -22,22c0,12.15 9.85,22 22,22c12.15,0 22,-9.85 22,-22c0,-12.15 -9.85,-22 -22,-22zM25,11c7.72,0 14,6.28 14,14c0,7.72 -6.28,14 -14,14c-7.72,0 -14,-6.28 -14,-14c0,-7.72 6.28,-14 14,-14zM25,13c-6.617,0 -12,5.383 -12,12c0,6.617 5.383,12 12,12c6.617,0 12,-5.383 12,-12c0,-6.617 -5.383,-12 -12,-12zM22.01953,18.50195c0.1745,0.00325 0.34745,0.05053 0.50195,0.14453l9,5.5c0.296,0.181 0.47852,0.50452 0.47852,0.85352c0,0.349 -0.18152,0.67152 -0.47852,0.85352l-9,5.5c-0.16,0.097 -0.34048,0.14648 -0.52148,0.14648c-0.168,0 -0.33628,-0.04391 -0.48828,-0.12891c-0.316,-0.177 -0.51172,-0.51009 -0.51172,-0.87109v-11c0,-0.361 0.19572,-0.69409 0.51172,-0.87109c0.1585,-0.088 0.33331,-0.1302 0.50781,-0.12695z"></path></g></g>
+                    </svg></a>
+                <a data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-html="true" title="Deezer" data-bs-placement="top" class="text-danger d-flex justify-content-around align-items-center" href="https://deezer.page.link/1PNjFqSumJxsWvYz6" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="40" height="50"
+                    viewBox="0,0,256,256"
+                    style="fill:#000000;">
+                    <g fill="#dc3545" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M39,14v2h8v-2zM21,17v2h8v-2zM39,17v2h8v-2zM21,20v2h8v-2zM39,20v2h8v-2zM3,23v2h8v-2zM21,23v2h8v-2zM30,23v2h8v-2zM39,23v2h8v-2zM3,26v2h8v-2zM21,26v2h8v-2zM30,26v2h8v-2zM39,26v2h8v-2zM3,29v2h8v-2zM12,29v2h8v-2zM21,29v2h8v-2zM30,29v2h8v-2zM39,29v2h8v-2zM3,32v2h8v-2zM12,32v2h8v-2zM21,32v2h8v-2zM30,32v2h8v-2zM39,32v2h8v-2zM3,35v2h8v-2zM12,35v2h8v-2zM21,35v2h8v-2zM30,35v2h8v-2zM39,35v2h8v-2z"></path></g></g>
+                    </svg></a>
+            </div>
+        </div>
+        <div class="presentacion-disco container-fluid row d-flex justify-content-center align-items-center p-0 m-0">
+            <div class="presentacion_disco_2 container h-100 d-flex flex-row justify-content-around align-items-center p-0 m-0">
+                <div class="info_disco_2 w-100 h-100 d-flex flex-row justify-content-start align-items-center p-0 m-0" id="info_disco_2">
+                    <div class="info-disco h-100 d-flex flex-column justify-content-center align-items-center" id="info-disco">
+                        <div data-bs-custom-class="custom-tooltip-2" data-bs-toggle="tooltip" data-bs-html="true" title="Click aquí para más información. 😉" data-bs-placement="left" class="p-0 m-0 d-flex justify-content-center align-items-center" href="latidos.html">
+                            <button class="swipe_container" id="swipe_container" onclick="mostrar_info_disco(this.id)">
+                                <h1 class="titulo-disco">Latidos</h1>
+                                <h4 class="artista">Enziskaos</h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="caratula-disco h-100 d-flex justify-content-center align-items-center">
+                        <a data-bs-custom-class="custom-tooltip-6" data-bs-toggle="tooltip" data-bs-html="true" title="Click para visitar su perfil de Instagram." data-bs-placement="right" id="custom-tooltip-6" class="contenedor_tooltip_6 p-0 m-0 d-flex justify-content-center align-items-center" href="https://instagram.com/yuriakume?igshid=YmMyMTA2M2Y=" target="_blank">
+                            <img data-bs-custom-class="custom-tooltip-5" data-bs-toggle="tooltip" data-bs-html="true" title="Carátula By: <br/>&#174;Yuriakume.</a>" data-bs-placement="left" class="caratula-disco-img" src="images/Caratula_Disco.jpg" alt="Carátula Latidos">
+                        </a>
+                    </div>
+                </div>
+                <div class="presentacion_disco_3 h-100 p-0 m-0" style="display: none;" id="presentacion_disco_3">
+                    <div class="parrafo_1 d-flex flex-row justify-content-around align-items-start p-0 m-0">
+                        <div class="p_1 h-100 p-1 m-0">
+                            <p>
+                                Latidos es el primer Álbum de Enziskaos, compuesto grabado y editado de forma casera, 
+                                donde encontraras una selección (aun quedan unos cuantos) de temas en versión "Demo" 
+                                que de otra manera nunca hubieran visto la luz. Todas las canciones  han sido compuestas, grabadas  y producidas por Rafael Perezagua, 
+                                salvo Pipi el Vikingo ( compuesto por Christian Bruhn ) y Bella Ciao (canción popular italiana)  
+                                que han sido agregadas a este Álbum al no tener ninguna reclamación de derechos de autor.
+                            </p>
+                        </div>
+                        <div class="p_2 h-100 p-1 m-0">
+                            <p>
+                                Créditos de la imagen de portada: Azucena Perezagua Cabrera.
+                            </p>
+                            <p>
+                                Si os gusta su trabajo, os recomiendo visitar su perfil de instagram 
+                                <a href="https://instagram.com/yuriakume?igshid=YmMyMTA2M2Y=">&#174;Yuriakume</a>, donde sube todo sus maravillosos dibujos.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="parrafo_2 p-0 m-0 d-flex flex-row justify-content-center align-items-center">
+                        ¡¡Muchas gracias a todos, y disfruten!!
+                    </p>  
+                    <div class="boton_return d-flex justify-content-end pr-2 m-0">
+                        <button style="margin-right: 10px; padding: 10px 40px;" id="return" onclick="mostrar_info_disco(this.id)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                            </svg>
+                            Volver 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3 w-75 p-0 mb-3">
+            <div class="acordeon_desktop accordion" id="accordionExample">
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header p-0 m-0" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h5 class="titulo-cancion col-5 h-100">1. He Aquí (Intro)</h5>
+                            <audio class="reproductor col-5" controls src="Enziskaos_Tracks/1. He aquí (Intro).mp3"></audio>
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body p-1 m-0">
+                            <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                    <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                    <p class="info text-light p-1 m-0">Un fin de semana estuve jugando con los "Sintes" de Kontakt tratando de crear una "Intro" chula para ponerla antes de empezar los conciertos, y salió esto, aunque nunca se usó... Pues mejor que mejor!!  Porque así, la puedo aprovechar como intro aquí, la base musical es original mía, la letra pertenece a una oración Vikinga que aparece en las ultimas escenas de la película "El guerrero numero 13", que lo disfruten!!</p>
+                                </div>
+                                <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                    <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                    <p class="info text-light p-1 m-0 h-100 w-100">He aquí que veo a mi padre, <br><br> He aquí que veo a mi madre, <br><br> A mis hermanas y hermanos, <br><br> He aquí que veo el linaje de mi pueblo hasta sus principios, <br><br> Y he aquí que me llaman, <br><br> Me piden que opcupe mi lugar entre ellos, <br><br> En la tierra de ASTRAGARD <br><br> El lugar donde viven los valientes, <br><br> Por siempre.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header p-0 m-0" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h5 class="titulo-cancion col-5 h-100">2. Mi Hogar</h5>
+                            <audio class="reproductor col-5" controls src="Enziskaos_Tracks/2. Mi Hogar.mp3"></audio>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body p-1 m-0">
+                            <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                    <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                    <p class="info text-light p-1 m-0">Mi Hogar es una historia de lucha y esperanza contra algunos males que azotan al ser humano, como la enfermedad, la ansiedad o la depresión,  asumiendo que existen batallas muy duras que no siempre se pueden ganar, pero en las que hay que luchar hasta el final!!</p>
+                                </div>
+                                <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                    <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                    <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="accordion-item border-0">
+                    <h2 class="accordion-header p-0 m-0" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h5 class="titulo-cancion col-5 h-100">3. Sueños de Papel</h5>
+                            <audio class="reproductor col-5" controls src="Enziskaos_Tracks/3. Sueños de papel.mp3"></audio>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body p-1 m-0">
+                            <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                    <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                    <p class="info text-light p-1 m-0">Tema compuesto y perpetrado por mi a mediados de 2016, inicialmente la letra hablaba sobre el amor platónico, pero con el paso del tiempo y 5 o 6 letras más tarde quedó así,  aunque no descarto que pueda volver a cambiar,  puesto que no he escrito aún una letra que me acabe de convencer.</p>
+                                </div>
+                                <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                    <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                    <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <h5 class="titulo-cancion col-5 h-100">4. El viaje</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/4. El Viaje.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Tema instrumental, que compuse inicialmente como homenaje a Tripy, un amigo de cuatro patas que me acompañó durante casi 17 años y que murió de viejo, (hace 12). Este tema simboliza hoy, para mi,  el corto viaje en que consiste la vida,  no perdamos el tiempo y hagamos que merezca la pena!! Salud!!</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">(Sin letra)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <h5 class="titulo-cancion col-5 h-100">5. Vuelta a Empezar</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/5. Vuelta a empezar.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Otro tema "Frankenstein" producto de mezclar varias piezas de mi desguace de canciones personal, (en este caso una base de mediados de 2015 con algún arreglo muy anterior ). En principio iba a ser una crítica hacia la Ley Mordaza de aquel año, pero tras diversos cambios la dejé así, creo que debía estar bastante cabreado cuando escribí esto, XD.</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <h5 class="titulo-cancion col-5 h-100">6. Bella Ciao</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/6. Bella Ciao.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Versión Rock/Punk de la canción popular italiana "Bella Ciao", que era cantada por los partisanos italianos en su lucha contra las tropas fascistas y nazis durante la segunda guerra mundial, convirtiéndose así, en el himno de la resistencia antifascista.</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <h5 class="titulo-cancion col-5 h-100">7. Contra las cuerdas</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/7. Contra las cuerdas.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Uno de los primeros temas que compuse y que nunca ha visto la luz mas allá de enseñarlo a amigos y familiares, o en algún ensayo, y que ahora he recuperado para la ocasión.</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <h5 class="titulo-cancion col-5 h-100">8. Latidos</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/8. Latidos.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Latidos es otro arreglo compuesto, grabado y producido en un par de tardes.</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <h5 class="titulo-cancion col-5 h-100">9. Pipi el Vikingo</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/9. Pipi el Vikingo.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Hola a todos, hoy en Covers Chungas Que Te Cagas, presentamos la versión del opening de la serie de "Vickie el Vikingo", autobiográfica y un poco "Friki" que lo pasen bien!!</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                <h5 class="titulo-cancion col-5 h-100">10. Lo vamos a petar</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/10. Lo vamos a petar.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">"Lo vamos a petar" es un tema desarrollado de una idea de 2003, mientras jugaba en casa con mi hija, que entonces tenía solo 6 años, a ensayar, ella cantaba, hacía coros y daba al play de la caja de ritmos... XD. El tema habla de lo complicado que se hace compaginar el trabajo, en mi caso autónomo de la construcción (presupuestos, facturas, suministros, materiales, sacar el tajo...cumplir plazos ), con tener una familia, criar unos hijos, mantener una casa, y aparte componer, ensayar, hacer bolos... etc, y todo solo por una ilusión... Para que encima te venga alguien a tocar las narices... Te tiene que gustar mucho esta historia para no mandarlo todo a tomar por saco!! Disfruten!! Que lo vamos a petar!! Salud!!</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingEleven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                <h5 class="titulo-cancion col-5 h-100">11. Pepe el Peleas</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/11. Pepe el peleas.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Escribí esta canción pensando en mi abuelo materno Pepe "el peleas" ( como era conocido en las "tascas" del barrio ), pero con los años he ido conociendo a otros "peleas", gente buena, sincera, y leal, con una filosofía de vida muy particular, se trata, para mí, de una categoría especial de personas, que dejaron su huella indeleble en mí, este tema ya está incluido en el disco de Astrágard, (un fuerte y afectuoso abrazo para mis excompañeros) pero he decidido hacer este "remake" ya que, por diversos motivos, sigue siendo una canción muy importante para mí y no quisiera que cayera en el olvido.</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos error maiores soluta eveniet, eius facilis. Itaque saepe delectus facilis soluta iure quos ab tenetur molestiae? Rerum illum minima eum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingTwelve">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                <h5 class="titulo-cancion col-5 h-100">12. Enemigo Necesario</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/12. Enemigo necesario.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Enemigo necesario, trata de ser un tema antisistema, reivindicativo y antifascista, un alegato en contra de la destrucción de la naturaleza, la guerra, el terrorismo, y las elites que lo provocan, en base al capitalismo salvaje que aumenta la desigualdad creando hambre y miseria, y destruyendo el modo de vida de millones de personas, por la avaricia de unos pocos. Pero no se preocupen, pueden seguir viendo el furgol , Pan y Circo hermanos!!</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aperiam animi, quia alias quam nihil optio, voluptatum fuga veniam nisi nam sunt neque odit itaque corrupti vel esse eaque repellendus!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingThirteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                <h5 class="titulo-cancion col-5 h-100">13. Noname</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/13. No name.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Noname es una canción instrumental, creada sobre un arpegio que lleva ya algunos años rondando mi cabeza, probablemente desde 2002 o 2003, al que le he añadido una línea de bajo y unos solos prácticamente improvisados, como curiosidad comentar que todas las guitarras menos el ultimo solo, están grabadas con una de mis primeras guitarras, (lleva conmigo desde el 89) a la que he colocado un juego de cuerdas 13/59 y afinación en C, con la que ando experimentando con cosillas de metal extremo, comentar por ultimo que "Noname" era el nombre que asignaba por defecto el DAW que utilizaba por entonces  y dado que el tema no tiene letra y que no se me ocurría ningún otro que no me estropeara el final... que mejor que dejarlo así "Noname"!!  y tu? como lo llamarías? Que lo pasen bien!!</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">(Sin letra)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acordeon_mobile accordion" id="accordionExample">
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <h5 class="titulo-cancion col-5 h-100">1. He Aquí (Intro)</h5>
+                        </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="menu">
+                                        <audio controls src=""></audio>
+                                        <div class="botones_de_accion">
+                                            <button class="estilos-botones" id="1" onclick="cargar_descripcion(this.id)">Descripción</button>
+                                            <button class="estilos-botones" id="1" onclick="cargar_letra(this.id)">Letra</button>
+                                        </div>
+                                        <div class="contenedor_cambiante" id="contenedor_cambiante">
+                                            <div class="contenedor descripcion" id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime tempore minus dolorem itaque, nobis necessitatibus esse. Fugiat quis nam incidunt tempore maiores, deleniti iure! Eveniet sed maxime nihil molestiae!</div>
+                                            <div class="contenedor letra" id="letra">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga illum ut consequuntur delectus eligendi? Officia dolorem quod, obcaecati eum iure ipsa vero laudantium, earum autem minus minima, odit maxime recusandae.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h5 class="titulo-cancion col-5 h-100">2. Mi Hogar</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/2. Mi Hogar.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Mi Hogar es una historia de lucha y esperanza contra algunos males que azotan al ser humano, como la enfermedad, la ansiedad o la depresión,  asumiendo que existen batallas muy duras que no siempre se pueden ganar, pero en las que hay que luchar hasta el final!!</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="accordion-item border-0">
+                        <h2 class="accordion-header p-0 m-0" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h5 class="titulo-cancion col-5 h-100">3. Sueños de Papel</h5>
+                                <audio class="reproductor col-5" controls src="Enziskaos_Tracks/3. Sueños de papel.mp3"></audio>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body p-1 m-0">
+                                <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                    <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                        <p class="info text-light p-1 m-0">Tema compuesto y perpetrado por mi a mediados de 2016, inicialmente la letra hablaba sobre el amor platónico, pero con el paso del tiempo y 5 o 6 letras más tarde quedó así,  aunque no descarto que pueda volver a cambiar,  puesto que no he escrito aún una letra que me acabe de convencer.</p>
+                                    </div>
+                                    <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                        <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                        <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <h5 class="titulo-cancion col-5 h-100">4. El viaje</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/4. El Viaje.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Tema instrumental, que compuse inicialmente como homenaje a Tripy, un amigo de cuatro patas que me acompañó durante casi 17 años y que murió de viejo, (hace 12). Este tema simboliza hoy, para mi,  el corto viaje en que consiste la vida,  no perdamos el tiempo y hagamos que merezca la pena!! Salud!!</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">(Sin letra)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <h5 class="titulo-cancion col-5 h-100">5. Vuelta a Empezar</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/5. Vuelta a empezar.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Otro tema "Frankenstein" producto de mezclar varias piezas de mi desguace de canciones personal, (en este caso una base de mediados de 2015 con algún arreglo muy anterior ). En principio iba a ser una crítica hacia la Ley Mordaza de aquel año, pero tras diversos cambios la dejé así, creo que debía estar bastante cabreado cuando escribí esto, XD.</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <h5 class="titulo-cancion col-5 h-100">6. Bella Ciao</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/6. Bella Ciao.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Versión Rock/Punk de la canción popular italiana "Bella Ciao", que era cantada por los partisanos italianos en su lucha contra las tropas fascistas y nazis durante la segunda guerra mundial, convirtiéndose así, en el himno de la resistencia antifascista.</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <h5 class="titulo-cancion col-5 h-100">7. Contra las cuerdas</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/7. Contra las cuerdas.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Uno de los primeros temas que compuse y que nunca ha visto la luz mas allá de enseñarlo a amigos y familiares, o en algún ensayo, y que ahora he recuperado para la ocasión.</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <h5 class="titulo-cancion col-5 h-100">8. Latidos</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/8. Latidos.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Latidos es otro arreglo compuesto, grabado y producido en un par de tardes.</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingNine">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    <h5 class="titulo-cancion col-5 h-100">9. Pipi el Vikingo</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/9. Pipi el Vikingo.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Hola a todos, hoy en Covers Chungas Que Te Cagas, presentamos la versión del opening de la serie de "Vickie el Vikingo", autobiográfica y un poco "Friki" que lo pasen bien!!</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingTen">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    <h5 class="titulo-cancion col-5 h-100">10. Lo vamos a petar</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/10. Lo vamos a petar.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">"Lo vamos a petar" es un tema desarrollado de una idea de 2003, mientras jugaba en casa con mi hija, que entonces tenía solo 6 años, a ensayar, ella cantaba, hacía coros y daba al play de la caja de ritmos... XD. El tema habla de lo complicado que se hace compaginar el trabajo, en mi caso autónomo de la construcción (presupuestos, facturas, suministros, materiales, sacar el tajo...cumplir plazos ), con tener una familia, criar unos hijos, mantener una casa, y aparte componer, ensayar, hacer bolos... etc, y todo solo por una ilusión... Para que encima te venga alguien a tocar las narices... Te tiene que gustar mucho esta historia para no mandarlo todo a tomar por saco!! Disfruten!! Que lo vamos a petar!! Salud!!</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora at beatae eaque tempore labore qui sapiente veritatis necessitatibus aliquid. Ducimus quos molestias cumque repellat laboriosam recusandae porro dignissimos culpa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingEleven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    <h5 class="titulo-cancion col-5 h-100">11. Pepe el Peleas</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/11. Pepe el peleas.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Escribí esta canción pensando en mi abuelo materno Pepe "el peleas" ( como era conocido en las "tascas" del barrio ), pero con los años he ido conociendo a otros "peleas", gente buena, sincera, y leal, con una filosofía de vida muy particular, se trata, para mí, de una categoría especial de personas, que dejaron su huella indeleble en mí, este tema ya está incluido en el disco de Astrágard, (un fuerte y afectuoso abrazo para mis excompañeros) pero he decidido hacer este "remake" ya que, por diversos motivos, sigue siendo una canción muy importante para mí y no quisiera que cayera en el olvido.</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dignissimos error maiores soluta eveniet, eius facilis. Itaque saepe delectus facilis soluta iure quos ab tenetur molestiae? Rerum illum minima eum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingTwelve">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                    <h5 class="titulo-cancion col-5 h-100">12. Enemigo Necesario</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/12. Enemigo necesario.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Enemigo necesario, trata de ser un tema antisistema, reivindicativo y antifascista, un alegato en contra de la destrucción de la naturaleza, la guerra, el terrorismo, y las elites que lo provocan, en base al capitalismo salvaje que aumenta la desigualdad creando hambre y miseria, y destruyendo el modo de vida de millones de personas, por la avaricia de unos pocos. Pero no se preocupen, pueden seguir viendo el furgol , Pan y Circo hermanos!!</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aperiam animi, quia alias quam nihil optio, voluptatum fuga veniam nisi nam sunt neque odit itaque corrupti vel esse eaque repellendus!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header p-0 m-0" id="headingThirteen">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                    <h5 class="titulo-cancion col-5 h-100">13. Noname</h5>
+                                    <audio class="reproductor col-5" controls src="Enziskaos_Tracks/13. No name.mp3"></audio>
+                                </button>
+                            </h2>
+                            <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-1 m-0">
+                                    <div class="row d-flex justify-content-around align-items-start p-1 m-0">
+                                        <div class="col-5 tabla-contenido d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="description bg-danger bg-gradient p-1 m-0 w-100 text-center">Descripción</h5>
+                                            <p class="info text-light p-1 m-0">Noname es una canción instrumental, creada sobre un arpegio que lleva ya algunos años rondando mi cabeza, probablemente desde 2002 o 2003, al que le he añadido una línea de bajo y unos solos prácticamente improvisados, como curiosidad comentar que todas las guitarras menos el ultimo solo, están grabadas con una de mis primeras guitarras, (lleva conmigo desde el 89) a la que he colocado un juego de cuerdas 13/59 y afinación en C, con la que ando experimentando con cosillas de metal extremo, comentar por ultimo que "Noname" era el nombre que asignaba por defecto el DAW que utilizaba por entonces  y dado que el tema no tiene letra y que no se me ocurría ningún otro que no me estropeara el final... que mejor que dejarlo así "Noname"!!  y tu? como lo llamarías? Que lo pasen bien!!</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column justify-content-around align-items-center p-0 m-0">
+                                            <h5 class="lyrics bg-danger bg-gradient p-1 m-0 w-100 text-center">Letra</h5>
+                                            <p class="info text-light p-1 m-0 h-100 w-100">(Sin letra)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer-importado"></footer>
+    <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script src="functions.js"></script>
+    
+</body>
+</html>

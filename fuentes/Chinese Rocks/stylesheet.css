@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Chinese Rocks Rg';
+    src: url('ChineseRocksRg-Regular.eot');
+    src: url('ChineseRocksRg-Regular.eot?#iefix') format('embedded-opentype'),
+        url('ChineseRocksRg-Regular.woff2') format('woff2'),
+        url('ChineseRocksRg-Regular.woff') format('woff'),
+        url('ChineseRocksRg-Regular.ttf') format('truetype'),
+        url('ChineseRocksRg-Regular.svg#ChineseRocksRg-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

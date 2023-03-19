@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Punkboy';
+    src: url('Punkboy-Italic.eot');
+    src: url('Punkboy-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Punkboy-Italic.woff2') format('woff2'),
+        url('Punkboy-Italic.woff') format('woff'),
+        url('Punkboy-Italic.ttf') format('truetype'),
+        url('Punkboy-Italic.svg#Punkboy-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Punkboy';
+    src: url('Punkboy.eot');
+    src: url('Punkboy.eot?#iefix') format('embedded-opentype'),
+        url('Punkboy.woff2') format('woff2'),
+        url('Punkboy.woff') format('woff'),
+        url('Punkboy.ttf') format('truetype'),
+        url('Punkboy.svg#Punkboy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Punkboy';
+    src: url('Punkboy-Bold.eot');
+    src: url('Punkboy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Punkboy-Bold.woff2') format('woff2'),
+        url('Punkboy-Bold.woff') format('woff'),
+        url('Punkboy-Bold.ttf') format('truetype'),
+        url('Punkboy-Bold.svg#Punkboy-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Punkboy';
+    src: url('Punkboy-BoldItalic.eot');
+    src: url('Punkboy-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Punkboy-BoldItalic.woff2') format('woff2'),
+        url('Punkboy-BoldItalic.woff') format('woff'),
+        url('Punkboy-BoldItalic.ttf') format('truetype'),
+        url('Punkboy-BoldItalic.svg#Punkboy-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

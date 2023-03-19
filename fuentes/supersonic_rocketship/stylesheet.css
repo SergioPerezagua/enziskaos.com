@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Supersonic Rocketship';
+    src: url('SupersonicRocketship.eot');
+    src: url('SupersonicRocketship.eot?#iefix') format('embedded-opentype'),
+        url('SupersonicRocketship.woff2') format('woff2'),
+        url('SupersonicRocketship.woff') format('woff'),
+        url('SupersonicRocketship.ttf') format('truetype'),
+        url('SupersonicRocketship.svg#SupersonicRocketship') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
